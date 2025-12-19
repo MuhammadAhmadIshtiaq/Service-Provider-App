@@ -1,0 +1,82 @@
+name: service_customer_app
+description: Customer app for booking and managing home services
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.4.9
+
+  # Supabase
+  supabase_flutter: ^2.3.4
+
+  # Navigation
+  go_router: ^13.0.0
+
+  # UI
+  cached_network_image: ^3.3.1
+  flutter_svg: ^2.0.9
+
+  # Utilities
+  intl: ^0.19.0
+  uuid: ^4.3.3
+  flutter_dotenv: ^5.1.0
+  shared_preferences: ^2.2.2
+  email_validator: ^2.1.17
+
+  # Image handling
+  image_picker: ^1.0.7
+  flutter_image_compress: ^2.1.0
+  image: ^4.1.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.2.21
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
+    - assets/icons/
+# Launcher icon configuration
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app_icon.png"
+
+# Native splash screen configuration
+# This will show your app icon with a custom background color
+flutter_native_splash:
+  color: "#1976D2"  # Change this to your desired color (hex format)
+  # Examples:
+  # "#FFFFFF" - White
+  # "#000000" - Black
+  # "#1976D2" - Blue
+  # "#4CAF50" - Green
+  # "#FF5722" - Orange
+  
+  image: assets/icons/app_icon.png
+  
+  android: true
+  ios: true
+  web: false
+  
+  # Android 12+ specific settings
+  android_12:
+    color: "#1976D2"  # Same color or different for Android 12+
+    image: assets/icons/app_icon.png
+    icon_background_color: "#1976D2"
+  
+  android_gravity: center
+  ios_content_mode: center
+  fullscreen: true
+
